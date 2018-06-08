@@ -1,0 +1,23 @@
+.demo-site .site-header, .demo-site.is-singular .site-header, .demo-site .site-banner {
+    top: 80px
+}
+
+.demo-site.admin-bar .site-header, .demo-site.admin-bar.is-singular .site-header, .demo-site.admin-bar .site-banner {
+    top: 112px
+}
+
+@media screen and (max-width: 1400px) {
+    .demo-site .site-header, .demo-site.admin-bar .site-header, .demo-site.is-singular .site-header, .demo-site.admin-bar.is-singular .site-header {
+        top: 0
+    }
+
+    .demo-site.admin-bar .site-banner, .demo-site .site-banner {
+        top: auto
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .demosite-tagline {
+        padding-bottom: 0
+    }
+}
