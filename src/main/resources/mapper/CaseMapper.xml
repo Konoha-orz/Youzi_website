@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.youzi.website.mapper.CaseMapper">
+    <select id="queryAllCase" resultType="java.util.Map">
+        SELECT case_id AS caseId,title,case_img AS caseImg,create_time AS createTime,content FROM case_table
+        ORDER BY case_id DESC
+    </select>
+    <insert id="insert" useGeneratedKeys="true" keyProperty="caseId" parameterType="Case">
+        INSERT  INTO case_table(title,case_img,create_time,content)
+        VALUES (#{title},#{caseImg},#{createTime},#{content})
+    </insert>
+    <select id="querySimpleCase" resultType="java.util.Map">
+        SELECT case_id AS caseId,title,create_time AS createTime FROM case_table
+        ORDER BY case_id DESC
+    </select>
+    <select id="queryById" resultType="java.util.Map">
+        SELECT case_id AS caseId,title,case_img AS caseImg,create_time AS createTime,content FROM case_table
+        <where>
+            case_id=#{caseId}
+        </where>
+    </select>
+    <update id="update" parameterType="Case">
+        UPDATE case_table SET title=#{title},create_time=#{createTime},case_img=#{caseImg},content=#{content}
+        <where>
+            case_id=#{caseId}
+        </where>
+    </update>
+    <delete id="deleteCase">
+        DELETE FROM case_table
+        <where>
+            case_id=#{caseId}
+        </where>
+    </delete>
+    <select id="queryNewCase" resultType="java.util.Map">
+        SELECT case_id AS caseId,case_img AS caseImg,title,create_time AS createTime FROM case_table
+        ORDER BY case_id DESC limit 3
+    </select>
+</mapper>

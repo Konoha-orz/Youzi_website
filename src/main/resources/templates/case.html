@@ -215,66 +215,58 @@
             <div id="site-banner" class="site-banner enable-slider">
 
                 <div class="site-banner-inner">
-
-
-
                     <article data-id="post-61" class="post-61 post type-post status-publish format-standard has-post-thumbnail hentry category-recipe tag-cookies tag-featured fallback-thumbnail">
+                        <a th:href="'/caseDetail?caseId='+${case1.caseId}"rel="bookmark">
+                            <div class="site-banner-media">
 
+                                <div class="site-banner-thumbnail" title="Almond lemon cookies" th:style="'background-image: url('+${case1.caseImg}+');'"></div>
 
-                        <div class="site-banner-media">
-
-                            <div class="site-banner-thumbnail" title="Almond lemon cookies" style="background-image: url(https://pulingle-picture-1.oss-cn-shenzhen.aliyuncs.com/556.jpg);"></div>
-                        </div><!-- .site-banner-media -->
-
-
+                            </div><!-- .site-banner-media -->
+                        </a>
                         <div class="site-banner-header">
-                            <span class="banner-featured">Featured</span>
+                            <span class="banner-featured">最新活动</span>
                             <h1 class="entry-title">
-                                <a href="https://dyad2demo.wordpress.com/2015/07/22/fresh-ingredients-this-season/" rel="bookmark">
-                                    Almond lemon cookies			</a>
+                                <a th:href="'/caseDetail?caseId='+${case1.caseId}"rel="bookmark" th:text="${case1.title}">
+                                </a>
                             </h1>
-                            <p>In the United States and Canada a cookie is a small, flat, sweet baked treat, usually containing flour, eggs, sugar, and either butter, cooking oil or another oil or fat, and often including ingredients such as raisins, oats, chocolate chips or nuts. Cookies may be mass-produced, made in small bakeries or home-made. Cookie variants include&#8230; </p>
-                            <div class="link-more"><a href="https://dyad2demo.wordpress.com/2015/07/22/fresh-ingredients-this-season/">Read More</a></div>
+                            <p th:text="${case1.createTime}"></p>
+                            <div class="link-more"><a th:href="'/caseDetail?caseId='+${case1.caseId}"rel="bookmark">查看详情</a></div>
                         </div><!-- .site-banner-header -->
                     </article>
+                    <article data-id="post-61" class="post-61 post type-post status-publish format-standard has-post-thumbnail hentry category-recipe tag-cookies tag-featured fallback-thumbnail">
+                        <a th:href="'/caseDetail?caseId='+${case2.caseId}"rel="bookmark">
+                            <div class="site-banner-media">
 
-                    <article data-id="post-227" class="post-227 post type-post status-publish format-standard has-post-thumbnail hentry category-recipe tag-featured tag-lunch tag-sandwich fallback-thumbnail">
+                                <div class="site-banner-thumbnail" title="Almond lemon cookies" th:style="'background-image: url('+${case2.caseImg}+');'"></div>
 
-
-                        <div class="site-banner-media">
-
-                            <div class="site-banner-thumbnail" title="Five new sandwiches to try" style="background-image: url(https://pulingle-picture-1.oss-cn-shenzhen.aliyuncs.com/557.png);"></div>
-                        </div><!-- .site-banner-media -->
-
-
+                            </div><!-- .site-banner-media -->
+                        </a>
                         <div class="site-banner-header">
-                            <span class="banner-featured">Featured</span>
+                            <span class="banner-featured">最新活动</span>
                             <h1 class="entry-title">
-                                <a href="https://dyad2demo.wordpress.com/2015/06/18/five-new-sandwiches-to-try/index.html" rel="bookmark">
-                                    Five new sandwiches to try			</a>
+                                <a th:href="'/caseDetail?caseId='+${case2.caseId}"rel="bookmark" th:text="${case2.title}">
+                                </a>
                             </h1>
-                            <p>A sandwich is a food item consisting of one or more types of food, such as vegetables, sliced cheese or meat, placed on or between slices of bread, or more generally any dish wherein two or more pieces of bread serve as a container or wrapper for some other food. The sandwich was originally a&#8230; </p>
-                            <div class="link-more"><a href="https://dyad2demo.wordpress.com/2015/06/18/five-new-sandwiches-to-try/index.html">Read More</a></div>
+                            <p th:text="${case2.createTime}"></p>
+                            <div class="link-more"><a th:href="'/caseDetail?caseId='+${case2.caseId}"rel="bookmark">查看详情</a></div>
                         </div><!-- .site-banner-header -->
                     </article>
+                    <article data-id="post-61" class="post-61 post type-post status-publish format-standard has-post-thumbnail hentry category-recipe tag-cookies tag-featured fallback-thumbnail">
+                        <a th:href="'/caseDetail?caseId='+${case3.caseId}"rel="bookmark">
+                            <div class="site-banner-media">
 
-                    <article data-id="post-98" class="post-98 post type-post status-publish format-standard has-post-thumbnail hentry category-recipe tag-breakfast tag-featured tag-recipe-2 fallback-thumbnail">
+                                <div class="site-banner-thumbnail" title="Almond lemon cookies" th:style="'background-image: url('+${case3.caseImg}+');'"></div>
 
-
-                        <div class="site-banner-media">
-
-                            <div class="site-banner-thumbnail" title="A brief history of waffles" style="background-image: url(https://dyad2demo.files.wordpress.com/2015/10/photo-1424847651672-bf20a4b0982b.jpeg?w=1800&#038;h=720&#038;crop=1);"></div>
-                        </div><!-- .site-banner-media -->
-
-
+                            </div><!-- .site-banner-media -->
+                        </a>
                         <div class="site-banner-header">
-                            <span class="banner-featured">Featured</span>
+                            <span class="banner-featured">最新活动</span>
                             <h1 class="entry-title">
-                                <a href="https://dyad2demo.wordpress.com/2015/06/05/a-brief-history-of-waffles/" rel="bookmark">
-                                    A brief history of waffles			</a>
+                                <a th:href="'/caseDetail?caseId='+${case3.caseId}"rel="bookmark" th:text="${case3.title}">
+                                </a>
                             </h1>
-                            <p>A waffle is a leavened batter or dough cooked between two plates, patterned to give a characteristic size, shape and surface impression. There are many variations based on the type of waffle iron and recipe used. Waffles are eaten throughout the world, particularly in Belgium, France, Netherlands, Germany, Poland, Hungary, Scandinavia, United States, with over a&#8230; </p>
-                            <div class="link-more"><a href="https://dyad2demo.wordpress.com/2015/06/05/a-brief-history-of-waffles/">Read More</a></div>
+                            <p th:text="${case3.createTime}"></p>
+                            <div class="link-more"><a th:href="'/caseDetail?caseId='+${case3.caseId}"rel="bookmark">查看详情</a></div>
                         </div><!-- .site-banner-header -->
                     </article>
                 </div><!-- .site-banner-inner -->
@@ -315,29 +307,33 @@
                 <!--</nav>-->
 
                 <!--活动案列-->
-                <div id="posts" class="posts">
 
+                <div id="posts" class="posts">
+                    <div th:each="item:${caseList}">
                     <article id="post-104" class="post-104 post type-post status-publish format-standard has-post-thumbnail sticky hentry category-vegetables tag-announcement tag-sticky fallback-thumbnail">
 
-                        <div class="entry-media" style="background-image: url(https://dyad2demo.files.wordpress.com/2016/06/photo-1446645681877-acde17e336a9.jpeg?w=630&#038;h=840&#038;crop=1);">
-                            <div class="entry-media-thumb" style="background-image: url(https://dyad2demo.files.wordpress.com/2016/06/photo-1446645681877-acde17e336a9.jpeg?w=680&#038;h=455&#038;crop=1); "></div>
+                        <div class="entry-media" th:style="'background-image: url('+${item.caseImg}+');'">
+                            <div class="entry-media-thumb"  style="background-image: url(${item.caseImg}); "></div>
                         </div>
 
                         <div class="entry-inner">
                             <div class="entry-inner-content">
                                 <header class="entry-header">
-                                    <h2 class="entry-title"><a href="https://dyad2demo.wordpress.com/2015/05/19/this-is-a-sticky-post/" rel="bookmark">This is a sticky post</a></h2>			</header><!-- .entry-header -->
+                                    <h2 class="entry-title" th:text="${item.title}"><a th:href="'/caseDetail?caseId='+${item.caseId}" rel="bookmark"></a></h2>
+                                    <p th:text="${item.createTime}" style="text-align: center"></p>
+                                </header><!-- .entry-header -->
 
                                 <div class="entry-content">
-                                    <p>This is an example of a sticky post. You can read more about them here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris purus urna, vulputate at convallis hendrerit, mattis id mi. Nulla mauris justo, sodales vitae sodales nec, fermentum at elit. Proin condimentum risus sed venenatis mollis. Donec auctor euismod sodales. Donec sodales&#8230; </p>
-                                    <div class="link-more"><a href="https://dyad2demo.wordpress.com/2015/05/19/this-is-a-sticky-post/">Read More</a></div>
+                                    <p th:utext="${item.content}"> </p>
+                                    <div class="link-more"><a th:href="'/caseDetail?caseId='+${item.caseId}">Read More</a></div>
                                 </div><!-- .entry-content -->
                             </div><!-- .entry-inner-content -->
                         </div><!-- .entry-inner -->
 
-                        <a class="cover-link" href="https://dyad2demo.wordpress.com/2015/05/19/this-is-a-sticky-post/"></a>
+                        <a class="cover-link" th:href="'/caseDetail?caseId='+${item.caseId}"></a>
                     </article><!-- #post-## -->
                 </div><!-- .posts -->
+                </div>
                 <!--活动案列-->
 
             </main><!-- #main -->
@@ -346,121 +342,12 @@
         </div><!-- #content -->
 
         <footer id="colophon" class="site-footer" role="contentinfo">
-
-            <div class="widget-area widgets-four" role="complementary">
-                <div class="grid-container">
-                    <aside id="categories-3" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
-                        <li class="cat-item cat-item-19599"><a href="https://dyad2demo.wordpress.com/category/artwork/" >Artwork</a>
-                        </li>
-                        <li class="cat-item cat-item-9680"><a href="https://dyad2demo.wordpress.com/category/baking/" >Baking</a>
-                        </li>
-                        <li class="cat-item cat-item-7215"><a href="https://dyad2demo.wordpress.com/category/book-review/" >Book Review</a>
-                        </li>
-                        <li class="cat-item cat-item-201072"><a href="https://dyad2demo.wordpress.com/category/cooking-techniques/" >Cooking Techniques</a>
-                        </li>
-                        <li class="cat-item cat-item-13789"><a href="https://dyad2demo.wordpress.com/category/dinner/" >Dinner</a>
-                        </li>
-                        <li class="cat-item cat-item-8191"><a href="https://dyad2demo.wordpress.com/category/fruit/" >Fruit</a>
-                        </li>
-                        <li class="cat-item cat-item-149"><a href="https://dyad2demo.wordpress.com/category/hosting/" >Hosting</a>
-                        </li>
-                        <li class="cat-item cat-item-304"><a href="https://dyad2demo.wordpress.com/category/photos/" >Photos</a>
-                        </li>
-                        <li class="cat-item cat-item-8845"><a href="https://dyad2demo.wordpress.com/category/recipe/" >Recipe</a>
-                        </li>
-                        <li class="cat-item cat-item-8190"><a href="https://dyad2demo.wordpress.com/category/vegetables/" >Vegetables</a>
-                        </li>
-                        <li class="cat-item cat-item-33"><a href="https://dyad2demo.wordpress.com/category/wordpress/" >WordPress</a>
-                        </li>
-                        <li class="cat-item cat-item-349"><a href="https://dyad2demo.wordpress.com/category/writing/" >Writing</a>
-                        </li>
-                    </ul>
-                    </aside><aside id="wp_tag_cloud-3" class="widget wp_widget_tag_cloud"><h3 class="widget-title">Tags</h3><div style="overflow:hidden"><a href="https://dyad2demo.wordpress.com/tag/announcement/" class="tag-cloud-link tag-link-290 tag-link-position-1" style="font-size: 18.5pt;" aria-label="announcement (3 items)">announcement</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/apples/" class="tag-cloud-link tag-link-182023 tag-link-position-2" style="font-size: 8pt;" aria-label="apples (1 item)">apples</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/best-of/" class="tag-cloud-link tag-link-10347 tag-link-position-3" style="font-size: 8pt;" aria-label="best of (1 item)">best of</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/breakfast/" class="tag-cloud-link tag-link-16205 tag-link-position-4" style="font-size: 8pt;" aria-label="breakfast (1 item)">breakfast</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/camping/" class="tag-cloud-link tag-link-13403 tag-link-position-5" style="font-size: 8pt;" aria-label="camping (1 item)">camping</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/condiment/" class="tag-cloud-link tag-link-48666 tag-link-position-6" style="font-size: 8pt;" aria-label="condiment (1 item)">condiment</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/cookies/" class="tag-cloud-link tag-link-18645 tag-link-position-7" style="font-size: 8pt;" aria-label="cookies (1 item)">cookies</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/dessert/" class="tag-cloud-link tag-link-8481 tag-link-position-8" style="font-size: 8pt;" aria-label="dessert (1 item)">dessert</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/dining/" class="tag-cloud-link tag-link-5956 tag-link-position-9" style="font-size: 8pt;" aria-label="dining (1 item)">dining</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/dinner-2/" class="tag-cloud-link tag-link-35004082 tag-link-position-10" style="font-size: 8pt;" aria-label="dinner (1 item)">dinner</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/featured/" class="tag-cloud-link tag-link-35890 tag-link-position-11" style="font-size: 18.5pt;" aria-label="featured (3 items)">featured</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/fire/" class="tag-cloud-link tag-link-34756 tag-link-position-12" style="font-size: 8pt;" aria-label="fire (1 item)">fire</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/food/" class="tag-cloud-link tag-link-586 tag-link-position-13" style="font-size: 8pt;" aria-label="food (1 item)">food</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/fruit-2/" class="tag-cloud-link tag-link-9606149 tag-link-position-14" style="font-size: 8pt;" aria-label="fruit (1 item)">fruit</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/garlic/" class="tag-cloud-link tag-link-75180 tag-link-position-15" style="font-size: 8pt;" aria-label="garlic (1 item)">garlic</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/guests/" class="tag-cloud-link tag-link-51014 tag-link-position-16" style="font-size: 8pt;" aria-label="guests (1 item)">guests</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/hosting-2/" class="tag-cloud-link tag-link-34932872 tag-link-position-17" style="font-size: 8pt;" aria-label="hosting (1 item)">hosting</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/howto/" class="tag-cloud-link tag-link-1921 tag-link-position-18" style="font-size: 22pt;" aria-label="howto (4 items)">howto</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/ingredients/" class="tag-cloud-link tag-link-22027 tag-link-position-19" style="font-size: 8pt;" aria-label="ingredients (1 item)">ingredients</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/local/" class="tag-cloud-link tag-link-705 tag-link-position-20" style="font-size: 8pt;" aria-label="local (1 item)">local</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/lox/" class="tag-cloud-link tag-link-106424 tag-link-position-21" style="font-size: 8pt;" aria-label="lox (1 item)">lox</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/lunch/" class="tag-cloud-link tag-link-16231 tag-link-position-22" style="font-size: 8pt;" aria-label="lunch (1 item)">lunch</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/meat/" class="tag-cloud-link tag-link-8188 tag-link-position-23" style="font-size: 8pt;" aria-label="meat (1 item)">meat</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/oatmeal/" class="tag-cloud-link tag-link-34362 tag-link-position-24" style="font-size: 8pt;" aria-label="oatmeal (1 item)">oatmeal</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/open-fire/" class="tag-cloud-link tag-link-1020731 tag-link-position-25" style="font-size: 8pt;" aria-label="open fire (1 item)">open fire</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/pasta/" class="tag-cloud-link tag-link-18654 tag-link-position-26" style="font-size: 8pt;" aria-label="pasta (1 item)">pasta</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/pickling/" class="tag-cloud-link tag-link-1825425 tag-link-position-27" style="font-size: 8pt;" aria-label="pickling (1 item)">pickling</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/plating/" class="tag-cloud-link tag-link-605922 tag-link-position-28" style="font-size: 8pt;" aria-label="plating (1 item)">plating</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/pork/" class="tag-cloud-link tag-link-18662 tag-link-position-29" style="font-size: 8pt;" aria-label="pork (1 item)">pork</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/presentation/" class="tag-cloud-link tag-link-9402 tag-link-position-30" style="font-size: 8pt;" aria-label="presentation (1 item)">presentation</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/professional/" class="tag-cloud-link tag-link-7830 tag-link-position-31" style="font-size: 8pt;" aria-label="professional (1 item)">professional</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/raspberries/" class="tag-cloud-link tag-link-570551 tag-link-position-32" style="font-size: 14.3pt;" aria-label="raspberries (2 items)">raspberries</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/recipe-2/" class="tag-cloud-link tag-link-783356 tag-link-position-33" style="font-size: 8pt;" aria-label="recipe (1 item)">recipe</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/recipes/" class="tag-cloud-link tag-link-2832 tag-link-position-34" style="font-size: 8pt;" aria-label="recipes (1 item)">recipes</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/review/" class="tag-cloud-link tag-link-1745 tag-link-position-35" style="font-size: 8pt;" aria-label="review (1 item)">review</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/salmon/" class="tag-cloud-link tag-link-78098 tag-link-position-36" style="font-size: 8pt;" aria-label="salmon (1 item)">salmon</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/salsa/" class="tag-cloud-link tag-link-20627 tag-link-position-37" style="font-size: 8pt;" aria-label="salsa (1 item)">salsa</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/sandwich/" class="tag-cloud-link tag-link-35428 tag-link-position-38" style="font-size: 8pt;" aria-label="sandwich (1 item)">sandwich</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/sauce/" class="tag-cloud-link tag-link-50502 tag-link-position-39" style="font-size: 8pt;" aria-label="sauce (1 item)">sauce</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/shopping/" class="tag-cloud-link tag-link-1508 tag-link-position-40" style="font-size: 8pt;" aria-label="shopping (1 item)">shopping</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/sticky/" class="tag-cloud-link tag-link-21547 tag-link-position-41" style="font-size: 8pt;" aria-label="sticky (1 item)">sticky</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/strawberries/" class="tag-cloud-link tag-link-189293 tag-link-position-42" style="font-size: 8pt;" aria-label="strawberries (1 item)">strawberries</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/thug-kitchen/" class="tag-cloud-link tag-link-120970361 tag-link-position-43" style="font-size: 8pt;" aria-label="thug kitchen (1 item)">thug kitchen</a>
-                    <a href="https://dyad2demo.wordpress.com/tag/tomatoes/" class="tag-cloud-link tag-link-110520 tag-link-position-44" style="font-size: 8pt;" aria-label="tomatoes (1 item)">tomatoes</a></div></aside><aside id="archives-3" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
-                    <li><a href='https://dyad2demo.wordpress.com/2015/10/'>October 2015</a></li>
-                    <li><a href='https://dyad2demo.wordpress.com/2015/07/'>July 2015</a></li>
-                    <li><a href='https://dyad2demo.wordpress.com/2015/06/'>June 2015</a></li>
-                    <li><a href='https://dyad2demo.wordpress.com/2015/05/'>May 2015</a></li>
-                    <li><a href='https://dyad2demo.wordpress.com/2015/04/'>April 2015</a></li>
-                    <li><a href='https://dyad2demo.wordpress.com/2015/03/'>March 2015</a></li>
-                    <li><a href='https://dyad2demo.wordpress.com/2015/01/'>January 2015</a></li>
-                    <li><a href='https://dyad2demo.wordpress.com/2011/07/'>July 2011</a></li>
-                </ul>
-                </aside>		<aside id="recent-posts-3" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
-                    <li>
-                        <a href="https://dyad2demo.wordpress.com/2015/10/30/heirloom-tomato-salsa/">Heirloom tomato salsa</a>
-                    </li>
-                    <li>
-                        <a href="https://dyad2demo.wordpress.com/2015/07/22/fresh-ingredients-this-season/">Almond lemon cookies</a>
-                    </li>
-                    <li>
-                        <a href="https://dyad2demo.wordpress.com/2015/07/07/helpful-hosting-tips/">Helpful hosting tips</a>
-                    </li>
-                    <li>
-                        <a href="https://dyad2demo.wordpress.com/2015/07/07/tricks-to-plating-like-a-pro/">Tricks to plating like a pro</a>
-                    </li>
-                    <li>
-                        <a href="https://dyad2demo.wordpress.com/2015/07/07/review-thug-kitchen/">Review: Thug Kitchen</a>
-                    </li>
-                </ul>
-                </aside>					</div><!-- .grid-container -->
-            </div><!-- #secondary -->
-
-
-            <div class="footer-bottom-info has-social-menu">
-
-                <nav class="jetpack-social-navigation jetpack-social-navigation-svg" role="navigation" aria-label="Social Links Menu">
-                    <div class="menu-social-links-menu-container"><ul id="menu-social-links-menu" class="menu"><li id="menu-item-118" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-118"><a href="http://www.facebook.com"><span class="screen-reader-text">Facebook</span><svg class="icon icon-facebook" aria-hidden="true" role="img"> <use href="#icon-facebook" xlink:href="#icon-facebook"></use> </svg></a></li>
-                        <li id="menu-item-119" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-119"><a href="http://www.linkedin.com"><span class="screen-reader-text">LinkedIn</span><svg class="icon icon-linkedin" aria-hidden="true" role="img"> <use href="#icon-linkedin" xlink:href="#icon-linkedin"></use> </svg></a></li>
-                        <li id="menu-item-120" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-120"><a href="http://www.twitter.com"><span class="screen-reader-text">Twitter</span><svg class="icon icon-twitter" aria-hidden="true" role="img"> <use href="#icon-twitter" xlink:href="#icon-twitter"></use> </svg></a></li>
-                        <li id="menu-item-121" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-121"><a href="http://instagram.com"><span class="screen-reader-text">Instagram</span><svg class="icon icon-instagram" aria-hidden="true" role="img"> <use href="#icon-instagram" xlink:href="#icon-instagram"></use> </svg></a></li>
-                    </ul></div>		</nav><!-- .jetpack-social-navigation -->
-
-                <div class="site-info">
-                    <a href="https://wordpress.com/?ref=footer_blog">Blog at WordPress.com.</a>
-
+            <div class="footer-bottom-info">
+                <div class="site-info" style="text-align: center">
+                    Copyright@ 2018
+                    青岛柚子极客文化传媒有限公司 | 手机：13789880090 |  邮箱：214925956@qq.com
+                    <br/>地址：北京市昌平区珠江摩尔国际中心6号楼1单元8层 |
+                    工业和信息化化部网站备案编号：京ICP备15029795号
                 </div><!-- .site-info -->
             </div><!-- .footer-bottom-info -->
 
@@ -469,11 +356,11 @@
     </div><!-- .site-inner -->
 </div><!-- #page -->
 
-<script type="text/javascript">
-    //<![CDATA[
-    var infiniteScroll = {"settings":{"id":"posts","ajaxurl":"https:\/\/dyad2demo.wordpress.com\/?infinity=scrolling","type":"click","wrapper":false,"wrapper_class":"infinite-wrap","footer":"primary","click_handle":"1","text":"Older posts","totop":"Scroll back to top","currentday":"27.05.15","order":"DESC","scripts":[],"styles":[],"google_analytics":false,"offset":0,"history":{"host":"dyad2demo.wordpress.com","path":"\/page\/%d\/","use_trailing_slashes":true,"parameters":""},"query_args":{"error":"","m":"","p":0,"post_parent":"","subpost":"","subpost_id":"","attachment":"","attachment_id":0,"name":"","pagename":"","page_id":0,"second":"","minute":"","hour":"","day":0,"monthnum":0,"year":0,"w":0,"category_name":"","tag":"","cat":"","tag_id":"","author":"","author_name":"","feed":"","tb":"","paged":0,"meta_key":"","meta_value":"","preview":"","s":"","sentence":"","title":"","fields":"","menu_order":"","embed":"","category__in":[],"category__not_in":[],"category__and":[],"post__in":[],"post__not_in":[61,227,98],"post_name__in":[],"tag__in":[],"tag__not_in":[],"tag__and":[],"tag_slug__in":[],"tag_slug__and":[],"post_parent__in":[],"post_parent__not_in":[],"author__in":[],"author__not_in":[],"posts_per_page":12,"ignore_sticky_posts":false,"suppress_filters":false,"cache_results":false,"update_post_term_cache":true,"lazy_load_term_meta":true,"update_post_meta_cache":true,"post_type":"","nopaging":false,"comments_per_page":"50","no_found_rows":false,"order":"DESC"},"last_post_date":"2015-05-27 12:00:00","stats":"blog=124508236&v=wpcom&tz=0&user_id=0&subd=dyad2demo&x_pagetype=infinite-click"}};
-    //]]>
-</script>
+<!--<script type="text/javascript">-->
+    <!--//<![CDATA[-->
+    <!--var infiniteScroll = {"settings":{"id":"posts","ajaxurl":"https:\/\/dyad2demo.wordpress.com\/?infinity=scrolling","type":"click","wrapper":false,"wrapper_class":"infinite-wrap","footer":"primary","click_handle":"1","text":"Older posts","totop":"Scroll back to top","currentday":"27.05.15","order":"DESC","scripts":[],"styles":[],"google_analytics":false,"offset":0,"history":{"host":"dyad2demo.wordpress.com","path":"\/page\/%d\/","use_trailing_slashes":true,"parameters":""},"query_args":{"error":"","m":"","p":0,"post_parent":"","subpost":"","subpost_id":"","attachment":"","attachment_id":0,"name":"","pagename":"","page_id":0,"second":"","minute":"","hour":"","day":0,"monthnum":0,"year":0,"w":0,"category_name":"","tag":"","cat":"","tag_id":"","author":"","author_name":"","feed":"","tb":"","paged":0,"meta_key":"","meta_value":"","preview":"","s":"","sentence":"","title":"","fields":"","menu_order":"","embed":"","category__in":[],"category__not_in":[],"category__and":[],"post__in":[],"post__not_in":[61,227,98],"post_name__in":[],"tag__in":[],"tag__not_in":[],"tag__and":[],"tag_slug__in":[],"tag_slug__and":[],"post_parent__in":[],"post_parent__not_in":[],"author__in":[],"author__not_in":[],"posts_per_page":12,"ignore_sticky_posts":false,"suppress_filters":false,"cache_results":false,"update_post_term_cache":true,"lazy_load_term_meta":true,"update_post_meta_cache":true,"post_type":"","nopaging":false,"comments_per_page":"50","no_found_rows":false,"order":"DESC"},"last_post_date":"2015-05-27 12:00:00","stats":"blog=124508236&v=wpcom&tz=0&user_id=0&subd=dyad2demo&x_pagetype=infinite-click"}};-->
+    <!--//]]>-->
+<!--</script>-->
 <!--  -->
 <script type='text/javascript' src='/myDemoSourcess/JS/j01.js'></script>
 <script type='text/javascript'>
