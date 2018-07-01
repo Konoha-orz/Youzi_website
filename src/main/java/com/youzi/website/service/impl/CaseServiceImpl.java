@@ -6,8 +6,6 @@ import com.youzi.website.domain.entity.Case;
 import com.youzi.website.mapper.CaseMapper;
 import com.youzi.website.service.CaseService;
 import com.youzi.website.utils.RespondBuilder;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

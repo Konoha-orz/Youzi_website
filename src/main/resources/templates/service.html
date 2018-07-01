@@ -253,7 +253,6 @@
                                             <h1 class="entry-title" >{{item.title}}</h1>
                                         </header><!-- .entry-header -->
                                         <div class="entry-content">
-                                            <p >{{item.createTime}}</p>
                                             <hr>
                                             <!--<h2>Full-Width</h2>-->
                                             {{item.content}}
@@ -306,7 +305,7 @@
             <div class="footer-bottom-info">
                 <div class="site-info" style="text-align: center">
                     Copyright@ 2018
-                    青岛柚子极客文化传媒有限公司 | 手机：13789880090 |  邮箱：214925956@qq.com
+                    青岛柚子极客文化传媒有限公司 | 手机：13789880090 |  邮箱：893680236@qq.com
                     <br/>地址：北京市昌平区珠江摩尔国际中心6号楼1单元8层 |
                     工业和信息化化部网站备案编号：京ICP备15029795号
                 </div><!-- .site-info -->
@@ -433,7 +432,7 @@
             $.ajax({
                 cache: true,//保留缓存数据
                 type: "GET",//为post请求
-                url: "/case/queryAll",//这是我在后台接受数据的文件名
+                url: "/service/queryAll",//这是我在后台接受数据的文件名
                 contentType: "application/json; charset=utf-8",
                 error: function (request) {//请求失败之后的操作
                     return;

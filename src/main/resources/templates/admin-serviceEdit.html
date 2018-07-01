@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
-    <title>案例编辑</title>
+    <title>服务编辑</title>
     <link rel="stylesheet" href="/layui/css/layui.css" media="all">
     <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
@@ -12,38 +12,19 @@
 <div class="layui-row">
     <div class="layui-col-md11">
         <form class="layui-form"> <!-- 提示：如果你不想用form，你可以换成div等任何一个普通元素 -->
-            <input th:value="${case.caseId}" id="caseId" name="caseId" style="display: none"/>
+            <input th:value="${service.serviceId}" id="serviceId" name="serviceId" style="display: none"/>
             <div class="layui-form-item">
                 <label class="layui-form-label">标题</label>
                 <div class="layui-input-block">
                     <input type="text" name="title" placeholder="请输入" autocomplete="off" class="layui-input"
-                           th:value="${case.title}">
-                </div>
-            </div>
-            <div class="layui-form-item">
-                <label class="layui-form-label">日期</label>
-                <div class="layui-input-block">
-                    <input type="text" class="layui-input" id="test1" name="date" th:value="${case.createTime}">
-                </div>
-            </div>
-            <div class="layui-form-item">
-                <label class="layui-form-label">封面</label>
-                <div class="layui-input-block">
-                    <img src="" id="myImg" name="myImg" class="layui-col-md2" th:src="${case.caseImg}"><br/>
-                </div>
-            </div>
-            <div class="layui-form-item">
-                <div class="layui-input-block">
-                    <button type="button" class="layui-btn" id="uploadBtn">
-                        <i class="layui-icon">&#xe67c;</i>上传图片
-                    </button>
+                           th:value="${service.title}">
                 </div>
             </div>
             <div class="layui-form-item layui-form-text">
                 <label class="layui-form-label">内容</label>
                 <div class="layui-input-block">
                     <div id="editor" class="editor">
-                        <p th:utext="${case.content}"></p>
+                        <p th:utext="${service.content}"></p>
                     </div>
                 </div>
             </div>
@@ -75,22 +56,20 @@
             // console.log(form.title.value)
             // console.log(form.date.value)
 
-            var caseDTO = {
+            var service = {
                 "content": editor.txt.html(),
-                "createTime": form.date.value,
                 "title": form.title.value,
-                "caseImg": document.getElementById("myImg").src,
-                "caseId": form.caseId.value
+                "serviceId": form.serviceId.value
             }
             // console.log(JSON.stringify(caseDTO))
 
             $.ajax({
                 cache: true,//保留缓存数据
                 type: "POST",//为post请求
-                url: "/case/update",//这是我在后台接受数据的文件名
+                url: "/service/update",//这是我在后台接受数据的文件名
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
-                data: JSON.stringify(caseDTO),
+                data: JSON.stringify(service),
                 error: function (request) {//请求失败之后的操作
                     return;
                 },
@@ -138,24 +117,6 @@
         // 读取 html
         alert(editor.txt.html())
     }, false)
-</script>
-<script>
-    layui.use('upload', function () {
-        var upload = layui.upload;
-
-        //执行实例
-        var uploadInst = upload.render({
-            elem: '#uploadBtn' //绑定元素
-            , url: '/upload/' //上传接口
-            , done: function (res) {
-                //上传完毕回调
-                document.getElementById("myImg").src = res.data[0]
-            }
-            , error: function () {
-                //请求异常回调
-            }
-        });
-    });
 </script>
 </body>
 </html>

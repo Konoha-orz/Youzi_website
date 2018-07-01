@@ -1,6 +1,7 @@
 package com.youzi.website.web;
 
 import com.youzi.website.service.CaseService;
+import com.youzi.website.service.ServiceService;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,6 +20,9 @@ public class AdminPageController {
 
     @Resource
     private CaseService caseService;
+
+    @Resource
+    private ServiceService serviceService;
 
     @RequestMapping(value = "/admin")
     public String admin(){
@@ -46,5 +50,33 @@ public class AdminPageController {
             model.addAttribute("case",caseMap);
             return "admin-caseEdit";
         }
+    }
+
+    @RequestMapping(value = "/admin/serviceDetail")
+    public String adminServiceDetail(){
+        return "admin-serviceDetail";
+    }
+
+    @RequestMapping(value = "/admin/serviceAdd")
+    public String adminServiceAdd(){
+        return "admin-serviceAdd";
+    }
+
+    @RequestMapping(value = "/admin/serviceEdit")
+    public String adminServiceEdit(HttpServletRequest request, Model model){
+        if(request.getParameter("serviceId")==null||request.getParameter("serviceId").equals(""))
+            return "admin-serviceDetail";
+        else {
+            String caseId=request.getParameter("serviceId");
+            int id=Integer.valueOf(caseId);
+            Map serviceMap=serviceService.queryById(id);
+            model.addAttribute("service",serviceMap);
+            return "admin-serviceEdit";
+        }
+    }
+
+    @RequestMapping(value = "/admin/login")
+    public String adminLogin(){
+        return "admin-login";
     }
 }

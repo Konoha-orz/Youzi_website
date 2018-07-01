@@ -1,6 +1,7 @@
 package com.youzi.website.web;
 
 import com.youzi.website.service.CaseService;
+import com.youzi.website.service.ServiceService;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,6 +22,9 @@ public class PageController {
 
     @Resource
     private CaseService caseService;
+
+    @Resource
+    private ServiceService serviceService;
 
 
     /**
@@ -86,15 +90,21 @@ public class PageController {
      */
     @RequestMapping(value = "/service")
     public String service(Model model){
-        List<Map> caseList= caseService.queryAllCase();
-        Map firstCase=caseList.get(0);
-        caseList.remove(0);
-        model.addAttribute("caseList",caseList);
-        model.addAttribute("firstCase",firstCase);
+        List<Map> serviceList= serviceService.queryAllService();
+        Map firstService=serviceList.get(0);
+        serviceList.remove(0);
+        model.addAttribute("serviceList",serviceList);
+        model.addAttribute("firstService",firstService);
         return "service";
     }
 
-
+    /**
+     * 联系我们
+     */
+    @RequestMapping(value = "/contact")
+    public String contact(Model model){
+        return "contact";
+    }
 
 
 }

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.youzi.website.mapper.ServiceMapper">
+    <select id="queryAllService" resultType="java.util.Map">
+        SELECT service_id AS serviceId,title,content FROM service_table
+        ORDER BY service_id DESC
+    </select>
+    <insert id="insert" useGeneratedKeys="true" keyProperty="serviceId" parameterType="Service">
+        INSERT  INTO service_table(title,content)
+        VALUES (#{title},#{content})
+    </insert>
+    <select id="querySimpleService" resultType="java.util.Map">
+        SELECT service_id AS serviceId,title FROM service_table
+        ORDER BY service_id DESC
+    </select>
+    <select id="queryById" resultType="java.util.Map">
+        SELECT service_id AS serviceId,title,content FROM service_table
+        <where>
+            service_id=#{serviceId}
+        </where>
+    </select>
+    <update id="update" parameterType="Service">
+        UPDATE service_table SET title=#{title},content=#{content}
+        <where>
+            service_id=#{serviceId}
+        </where>
+    </update>
+    <delete id="deleteService">
+        DELETE FROM service_table
+        <where>
+            service_id=#{serviceId}
+        </where>
+    </delete>
+</mapper>

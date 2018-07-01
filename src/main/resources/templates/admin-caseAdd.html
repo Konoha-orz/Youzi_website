@@ -48,6 +48,8 @@
                 <div class="layui-input-block">
                     <button class="layui-btn" lay-submit lay-filter="*">立即提交</button>
                     <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    <div id="loading">
+                    </div>
                 </div>
             </div>
             <!-- 更多表单结构排版请移步文档左侧【页面元素-表单】一项阅览 -->
@@ -84,11 +86,16 @@
                     return;
                 },
                 success: function (data) {//请求成功之后的操作
+                    $("#loading").empty(); //ajax返回成功，清除loading图标
                     console.log(JSON.stringify(data));
                     window.parent.location.reload(); //刷新父页面
                     //当你在iframe页面关闭自身时
                     var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
                     parent.layer.close(index); //再执行关闭
+                },
+                beforeSend:function(XMLHttpRequest){
+                    $("#loading").html("<i class=\"layui-icon layui-icon-loading layui-icon layui-anim layui-anim-rotate layui-anim-loop\" style=\"font-size: 50px; text-align: center;margin-top: 50px;\n" +
+                        "    margin-left: 50%;\"></i>"); //在后台返回success之前显示loading图标
                 }
             });
 
