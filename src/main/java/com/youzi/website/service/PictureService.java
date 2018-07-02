@@ -25,4 +25,11 @@ public interface PictureService {
     * @Des: 富文本编辑器的图片上传服务（通过Part上传）
     */
     Map editorUpload(HttpServletRequest request);
+
+    /**
+    * @param:
+    * @return: String
+    * @Des: 返回图形验证码服务
+    */
+    String getCaptcha();
 }

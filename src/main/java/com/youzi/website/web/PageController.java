@@ -56,19 +56,6 @@ public class PageController {
     }
 
     /**
-     *
-     */
-    @RequestMapping(value = "/index(1)")
-    public String index1Page(){
-        return "index(1)";
-    }
-
-    @RequestMapping(value = "/editor")
-    public String editor(){
-        return "editor";
-    }
-
-    /**
      * 案例详情
      */
     @RequestMapping(value = "/caseDetail")

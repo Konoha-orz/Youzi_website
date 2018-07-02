@@ -44,4 +44,14 @@ public class PictureController {
     public Map upload(HttpServletRequest request){
         return pictureService.editorUpload(request);
     }
+
+    /**
+    * @param:
+    * @return:
+    * @Des: 获取图形验证码接口
+    */
+    @RequestMapping(value = "/getCaptcha",method = RequestMethod.GET)
+    public String getCaptcha(){
+        return pictureService.getCaptcha();
+    }
 }

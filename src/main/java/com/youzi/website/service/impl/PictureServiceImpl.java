@@ -2,7 +2,10 @@ package com.youzi.website.service.impl;
 
 import com.youzi.website.service.PictureService;
 import com.youzi.website.utils.OssUploadUtil;
+import com.youzi.website.utils.RandomCodeUtil;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -13,6 +16,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by @杨健 on 2018/6/28 11:21
@@ -21,6 +25,9 @@ import java.util.Map;
  */
 @Service("pictureService")
 public class PictureServiceImpl implements PictureService {
+
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
 
     @Resource
     private OssUploadUtil ossUploadUtil;
@@ -64,5 +71,24 @@ public class PictureServiceImpl implements PictureService {
             result.put("data",null);
         }
         return result;
+    }
+
+    @Override
+    public String getCaptcha() {
+
+        try {
+            RandomCodeUtil randomCodeUtil = new RandomCodeUtil();
+            //获取4位随机字符串
+            String randomStr = randomCodeUtil.getStringRandom(4);
+            //字符串存入Redis
+            stringRedisTemplate.opsForValue().set("captcha", randomStr, 180, TimeUnit.SECONDS);
+            //随机字符串转出base64验证码
+            String randomBase64Code = randomCodeUtil.imageToBase64(120, 40, randomStr);
+            return randomBase64Code;
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+
     }
 }
