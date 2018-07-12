@@ -47,6 +47,7 @@
             padding: 0 !important;
         }
     </style>
+    <link rel="stylesheet" href="/layui/css/layui.css">
     <link rel="stylesheet" href="https://s2.wp.com/_static/??-eJyNkFEOAiEMRC8kNuqqX8azIFuxCpQsJWRvL2Y1wagb/2Yy88oEKFEZDoJBwGcVXbYUElgMOFANfsilSWkBDSsX9Jgg5hP0o+7VGpKMDv/oUTBTV5Vo2H8QzarEhrRTHkNu9RxSqLcoCTDXlG+EyukCgj46LXXI95VfDjzfmz6iNRNMEFim8CXmrlpk5dhoIQ5vRp2dpmEOHfDk2FZpobYa+4CO/rDarve7Tbfqdtc79Oqyag==?cssminify=yes" type='text/css' media='all'>
     <link rel="stylesheet" href="/myDemoSourcess/CSS/c04.css" type="text/css" media="all">
     <link rel='stylesheet' id='all-css-0-1' href='/myDemoSourcess/CSS/c9.css' type='text/css' media='all' />
@@ -139,14 +140,14 @@
         }
     </style>
     <style id="demo-site-activation-logged-out">
-        html {
-            margin-top: 80px !important;
-        }
-        @media screen and (max-width: 620px) {
-            html {
-                margin-top: 100px !important;
-            }
-        }
+        /*html {*/
+            /*margin-top: 80px !important;*/
+        /*}*/
+        /*@media screen and (max-width: 620px) {*/
+            /*html {*/
+                /*margin-top: 100px !important;*/
+            /*}*/
+        /*}*/
         @media screen and (max-width: 600px) {
             .demosite-activate {
                 position: absolute;
@@ -163,30 +164,38 @@
 
 
     <header id="masthead" class="site-header" role="banner">
-        <div  style="padding:10px 0px;width:1200px;margin:0px auto;overflow:hidden;clear:both;">
 
-            <img src="/myDemoSourcess/img/b.png">
 
+        <div class="layui-col-md9">
+            <div style="padding:10px 0px;width:auto;margin:0px auto;overflow:hidden;clear:both;">
+
+                <img src="/myDemoSourcess/img/b.png">
+
+            </div>
         </div>
-
-        <div class="site-branding">
-            <!--<h1 class="site-title">-->
-            <!--<a href="https://dyad2demo.wordpress.com/" rel="home">-->
-            <!--青岛柚子极客文化传媒有限公司				</a>-->
-            <!--</h1>-->
-            <p class="site-description">Dyad 2 pairs your written content and images together in perfect balance</p>
-        </div><!-- .site-branding -->
-
-        <nav id="site-navigation" class="main-navigation" role="navigation">
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">Menu</button>
-            <div class="primary-menu"><ul id="primary-menu" class="menu"><li id="menu-item-105" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-105"><a href="/">主页</a></li>
-                <li id="menu-item-312" class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-312"><a href="/service">业务资源</a>
-                </li>
-                <li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106"><a href="/case">活动案例</a></li>
-                <li id="menu-item-107" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-107"><a href="/contact">联系我们</a></li>
-                <!--<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a href="https://dyad2demo.wordpress.com/html-elements/">HTML Elements</a></li>-->
-            </ul></div>
-        </nav>
+        <div class="layui-col-md3" style="margin-top: 50px">
+            <nav id="site-navigation" class="main-navigation" role="navigation">
+                <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">菜单</button>
+                <div class="primary-menu">
+                    <ul id="primary-menu" class="menu">
+                        <li id="menu-item-105"
+                            class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-105">
+                            <a href="/">主页</a></li>
+                        <li id="menu-item-312"
+                            class="menu-item menu-item-type-post_type menu-item-object-page  menu-item-312">
+                            <a href="/service">业务资源</a>
+                        </li>
+                        <li id="menu-item-106"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106"><a
+                                href="/case">活动案例</a></li>
+                        <li id="menu-item-107"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-107"><a
+                                href="/contact">联系我们</a></li>
+                        <!--<li id="menu-item-108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-108"><a href="https://dyad2demo.wordpress.com/html-elements/">HTML Elements</a></li>-->
+                    </ul>
+                </div>
+            </nav>
+        </div>
 
     </header><!-- #masthead -->
 
@@ -297,7 +306,7 @@
                     <article id="post-104" class="post-104 post type-post status-publish format-standard has-post-thumbnail sticky hentry category-vegetables tag-announcement tag-sticky fallback-thumbnail">
 
                         <div class="entry-media" th:style="'background-image: url('+${item.caseImg}+');'">
-                            <div class="entry-media-thumb"  style="background-image: url(${item.caseImg}); "></div>
+                            <div class="entry-media-thumb"  th:style="'background-image: url('+${item.caseImg}+');'"></div>
                         </div>
 
                         <div class="entry-inner">
