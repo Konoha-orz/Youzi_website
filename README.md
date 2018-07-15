@@ -23,7 +23,7 @@
 * 活动案例展示
  ![活动案例展示](./pic/活动案例展示1.PNG)
  ![活动案例展示](./pic/活动案例展示2.PNG)
-* 后台登录
+* 后台登入
  ![后台登录](./pic/后台登录.PNG)
 * 案例管理
  ![案例管理](./pic/案例管理.PNG)
@@ -31,40 +31,6 @@
 * 服务管理
  ![服务管理](./pic/服务管理.PNG)
   ![服务编辑](./pic/服务编辑.PNG)
-
-## 依赖
-### java后端依赖环境
-* Maven 3
-* Java 8
-* MySQL + Redis
-
-## 工程说明
-* cloud-config-server：配置中心。
-* cloud-eureka-server：注册中心。
-* cloud-simple-service：自定义的微服务。
-* cloud-zipkin-ui：分布式链路调用监控系统，聚合各业务系统调用延迟数据，达到链路调用监控跟踪。
-* cloud-vue : vue（Vue2.x + Vue-router2.x + Vuex)的前端项目
-
-## 效果图
-![登录](./pic/登录.png)
-
-![部门管理](./pic/部门管理.png)
-
-![部门管理](./pic/部门管理.png)
-
-![菜单管理](./pic/菜单管理.png)
-
-![岗位管理](./pic/岗位管理.png)
-
-![权限规则管理](./pic/权限规则管理.png)
-
-![用户组管理](./pic/用户组管理.png)
-
-![注册中心](./pic/注册中心.png)
-
-![swagger](./pic/swagger.png)
-
-![zipkin](./pic/zipkin.png)
 
 
 
